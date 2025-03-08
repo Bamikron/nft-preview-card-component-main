@@ -1,0 +1,162 @@
+:root {
+    --Soft-blue: hsl(215, 51%, 70%);
+    --Cyan: hsl(178, 100%, 50%);
+    --Very-dark-blue-main-BG: hsl(217, 54%, 11%);
+    --Very-dark-blue-card-BG: hsl(216, 50%, 16%);
+    --Very-dark-blue-line: hsl(215, 32%, 27%);
+    --White: hsl(0, 0%, 100%);
+}
+
+@font-face {
+    font-family: Outfit;
+    src: url(https://fonts.google.com/specimen/Outfit);
+}
+
+body {
+    background-color: var(--Very-dark-blue-main-BG);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Outfit', sans-serif;
+}
+
+main {
+    width: 20%;
+    background-color: var(--Very-dark-blue-card-BG);
+    box-shadow: 5px 5px 20px 5px rgba(0, 0, 0, 0.361);
+    border-radius: 24px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+}
+
+
+aside {
+    position: relative;
+    width: 100%;
+    height: 30vh;
+    border-radius: 16px;
+}
+
+aside img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 16px;
+}
+
+.overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    /* background-color: hsla(var(--primary-color-hsl), 0.5); */
+    background-color: hsla(178, 100%, 50%, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+    display: none;
+    cursor: pointer;
+
+}
+
+aside:hover .overlay {
+    display: flex;
+}
+
+.overlay img {
+    width: 100px;
+    height: 100px;
+}
+
+
+article h3 {
+    color: var(--White);
+    font-size: 18px;
+    cursor: pointer;
+}
+
+article h3:hover {
+    color: var(--Cyan);
+}
+
+article p {
+    font-size: 16px;
+    color: var(--Soft-blue);
+}
+
+.time {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 8px;
+}
+
+.left {
+    color: var(--Cyan);
+    font-weight: 700;
+    font-size: 16px;
+    display: flex;
+    align-self: center;
+    gap: 16px;
+
+}
+
+.right {
+    font-size: 16px;
+    color: var(--Soft-blue);
+    text-align: right;
+    display: flex;
+    align-self: center;
+    justify-content: end;
+    gap: 8px;
+}
+
+.line {
+    width: 100%;
+    height: 2px;
+    background-color: var(--Very-dark-blue-line);
+    margin-top: 24px;
+}
+
+.name {
+    display: flex;
+    margin-top: 24px;
+    gap: 16px;
+    align-items: center;
+}
+
+.name img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid var(--White);
+}
+
+.name p {
+    color: var(--Soft-blue);
+    font-size: 16px;
+}
+
+.name span {
+    color: var(--White);
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.name span:hover {
+    color: var(--Cyan);
+}
+
+
+@media screen and (max-width: 767px) {
+    main {
+        width: 80%;
+    }
+}
